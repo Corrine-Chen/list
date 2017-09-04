@@ -50,23 +50,23 @@ public:
 	{
 		return &(operator*());
 	}
-	Self& operator++()//Ç°ÖÃ++
+	Self& operator++()//å‰ç½®++
 	{
 		_node=_node->_next;
 		return *this;
 	}
-	Self operator++(int)//ºóÖÃ++
+	Self operator++(int)//åç½®++
 	{
 		Self p(*this);
 		_node=_node->_next;
 		retuen p;
 	}
-	Self& operator--()//Ç°ÖÃ--
+	Self& operator--()//å‰ç½®--
 	{
 		_node=_node->_prev;
 		return *this;
 	}
-	Self operator--(int)//ºóÖÃ--
+	Self operator--(int)//åç½®--
 	{
 		LinkType p(*this);
 		_node=_node->_prev;
@@ -93,7 +93,7 @@ public:
 	typedef __ListIterator__<T, const T&, const T*> ConstIterator;
 
 public:
-	List()//¹¹Ôìº¯Êı
+	List()//æ„é€ å‡½æ•°
 	{
 		EmptyInit();
 	}
@@ -112,7 +112,7 @@ public:
 		NewNode->_next=_node;
 		_node->_prev=NewNode;
 	}
-	List(const List<T>& t)//¿½±´¹¹Ôìº¯Êı
+	List(const List<T>& t)//æ‹·è´æ„é€ å‡½æ•°
 	{
 		EmptyInit();
 		Iterator it =t._node ->_next;
@@ -123,14 +123,14 @@ public:
 		}
 	}
 
-	~List()//Îö¹¹º¯Êı
+	~List()//ææ„å‡½æ•°
 	{
 		Clear();
 		delete _node;
 	}
 	List<T>& operator=(const List<T>& l);
 	////////////////////////////////////////////
-	Iterator Begin()// ·µ»ØÖ¸ÏòÁ´±íµÚÒ»¸öÔªËØÖ®ºóµÄµü´úÆ÷Ö¸Õë¡£
+	Iterator Begin()// è¿”å›æŒ‡å‘é“¾è¡¨ç¬¬ä¸€ä¸ªå…ƒç´ ä¹‹åçš„è¿­ä»£å™¨æŒ‡é’ˆã€‚
 	{
 		return _node->_next;
 	}
@@ -138,7 +138,7 @@ public:
 	{
 		return _node->_next;
 	}
-	Iterator End()//·µ»ØÖ¸ÏòÁ´±í×îºóÒ»¸öÔªËØÖ®ºóµÄµü´úÆ÷Ö¸Õë¡£ 
+	Iterator End()//è¿”å›æŒ‡å‘é“¾è¡¨æœ€åä¸€ä¸ªå…ƒç´ ä¹‹åçš„è¿­ä»£å™¨æŒ‡é’ˆã€‚ 
 	{
 		return _node;
 	}
@@ -146,11 +146,11 @@ public:
 	{
 		return _node;
 	}
-	bool Empty()//ÅĞ¿Õ
+	bool Empty()//åˆ¤ç©º
 	{
 		return _node==_node->_next;
 	}
-	SizeType Size()const//·µ»ØÁ´±íÊµ¼ÊÔªËØµÄ¸öÊı
+	SizeType Size()const//è¿”å›é“¾è¡¨å®é™…å…ƒç´ çš„ä¸ªæ•°
 	{
 		Iterator it(_node->_next);
 		size_t t=0;
@@ -161,9 +161,9 @@ public:
 		}
 		return t;
 	}
-	//SizeType MaxSize()const//·µ»ØÁ´±í¿ÉÄÜÈİÄÉµÄ×î´óÔªËØÊıÁ¿
+	//SizeType MaxSize()const//è¿”å›é“¾è¡¨å¯èƒ½å®¹çº³çš„æœ€å¤§å…ƒç´ æ•°é‡
 	
-	Reference Front()//·µ»ØµÚÒ»¸öÔªËØµÄÒıÓÃ
+	Reference Front()//è¿”å›ç¬¬ä¸€ä¸ªå…ƒç´ çš„å¼•ç”¨
 	{
 		return(*Begin());
 	}
@@ -171,7 +171,7 @@ public:
 	{
 		return(*Begin());
 	}
-	Reference Back()//·µ»Ø×îºóÒ»¸öÔªËØµÄºóÒ»¸öÖ¸Õë
+	Reference Back()//è¿”å›æœ€åä¸€ä¸ªå…ƒç´ çš„åä¸€ä¸ªæŒ‡é’ˆ
 	{
 		return (*(--End()));
 	}
@@ -179,7 +179,7 @@ public:
 	{
 		return (*(--End()));
 	}
-	Iterator Insert(Iterator pos, const T& x = T())//ÔÚÁ´±íÖĞ²åÈëposÔªËØ
+	Iterator Insert(Iterator pos, const T& x = T())//åœ¨é“¾è¡¨ä¸­æ’å…¥poså…ƒç´ 
 	{
 		 LinkType temp=new Node(x);
 		 temp->_next=pos._node;
@@ -214,7 +214,7 @@ public:
 	{
 		Erase(End());
 	}
-	void ReSize(SizeType newsize, const T& data)//µ÷ÕûÈİÆ÷´óĞ¡
+	void ReSize(SizeType newsize, const T& data)//è°ƒæ•´å®¹å™¨å¤§å°
 	{
 		if(newsize<Size())
 		{
@@ -233,11 +233,11 @@ public:
 			}
 		}
 	}
-	//void Assign(SizeType n, const T& data)//½«n¸öÖµÎªdata¿½±´¸³Öµ¸øÁ´±í
+	//void Assign(SizeType n, const T& data)//å°†nä¸ªå€¼ä¸ºdataæ‹·è´èµ‹å€¼ç»™é“¾è¡¨
 	//{
 
 	//}
-	void Clear()//Çå¿Õ
+	void Clear()//æ¸…ç©º
 	{
 		Iterator it = _node->_next;
 		while(it!=_node)
