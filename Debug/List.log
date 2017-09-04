@@ -1,0 +1,24 @@
+﻿生成启动时间为 2017/3/27 22:19:19。
+     1>项目“G:\c语言程序\List\List\List.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>InitializeBuildStatus:
+         正在对“Debug\List.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /clr /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm- /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" /analyze- /errorReport:prompt list1.cpp
+         list1.cpp
+     1>c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.0\system.core.dll : warning C4945: “ExtensionAttribute”: 无法从“c:\program files (x86)\reference assemblies\microsoft\framework\.netframework\v4.0\system.core.dll”导入符号: 因为“System::Runtime::CompilerServices::ExtensionAttribute”已从另一个程序集“mscorlib”导入
+                 c:\windows\microsoft.net\framework\v4.0.30319\mscorlib.dll : 参见“System::Runtime::CompilerServices::ExtensionAttribute”的声明
+                 使用最先看到的类型；重新排列导入程序集的顺序以使用当前类型
+                 在导入类型“System.Runtime.CompilerServices.ExtensionAttribute”(从程序集“System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089”中导入)时发生此诊断。
+     1>list1.cpp(110): error C2059: 语法错误:“数字上的错误后缀”
+     1>list1.cpp(111): error C2059: 语法错误:“数字上的错误后缀”
+     1>list1.cpp(113): error C2059: 语法错误:“数字上的错误后缀”
+     1>list1.cpp(107): error C2143: 语法错误 : 缺少“)”(在“常量”的前面)
+                 list1.cpp(252): 参见对正在编译的类 模板 实例化“List<T>”的引用
+     1>list1.cpp(107): error C2143: 语法错误 : 缺少“;”(在“常量”的前面)
+     1>list1.cpp(107): error C2059: 语法错误:“)”
+     1>list1.cpp(107): error C2334: “{”的前面有意外标记；跳过明显的函数体
+     1>已完成生成项目“G:\c语言程序\List\List\List.vcxproj”(rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.45
